@@ -58,21 +58,3 @@ python3 download_objaverse.py --filtered_file ../filtered_15k.json --output_name
    ```
 
 
-This will then render the images into the `views` directory.
-
-### (Optional) Logging and Uploading
-
-In the `scripts/distributed.py` script, we use [Wandb](https://wandb.ai/site) to log the rendering results. You can create a free account and then set the `WANDB_API_KEY` environment variable to your API key.
-
-We also use [AWS S3](https://aws.amazon.com/s3/) to upload the rendered images. You can create a free account and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to your credentials.
-
-### 👋 Our Team
-
-Objaverse is an open-source project built by the [PRIOR team](//prior.allenai.org) at the [Allen Institute for AI](//allenai.org) (AI2).
-AI2 is a non-profit institute with the mission to contribute to humanity through high-impact AI research and engineering.
-
-<br />
-
-<a href="//prior.allenai.org">
-<p align="center"><img width="100%" src="https://raw.githubusercontent.com/allenai/ai2thor/main/doc/static/ai2-prior.svg" /></p>
-</a>
