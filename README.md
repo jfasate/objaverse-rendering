@@ -42,20 +42,21 @@ sudo python3 scripts/start_xserver.py start
 
 ### Rendering
 
-1. Download the objects:
+1. Filter the objets:
+   ```
+   python3 filter_objaverse.py --sample_size 15000 --output_file ../filtered_15k.json
+   ```
 
-```bash
-python3 scripts/download_objaverse.py --start_i 0 --end_i 100
+2. Download the objects:
+
 ```
-
-2. Start the distributed rendering script:
-
-```bash
-python3 scripts/distributed.py \
-  --num_gpus <NUM_GPUs> \
-  --workers_per_gpu <WORKERS_PER_GPU> \
-  --input_models_path <INPUT_MODELS_PATH>
+python3 download_objaverse.py --filtered_file ../filtered_15k.json --output_name mvd_15k --batch_size 500
 ```
+3. Run:
+   ```
+   ./progress_tracker.sh
+   ```
+
 
 This will then render the images into the `views` directory.
 
